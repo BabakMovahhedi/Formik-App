@@ -10,11 +10,12 @@ const Input = ({label,name,formik,type='text'}) => {
                     {...formik.getFieldProps(name)} 
                     // onChange={formik=>(handleChange)}
                     // onBlur={formik.handleBlur}
-                    // valu={formik.values.name}
+                    // value={formik.values.name}
                      />
-            {formik.errors[name] && formik.touched[name] && <div className="errors">{formik.errors[name]}</div>}  
+            {formik.errors[name] && formik.touched[name] && 
+            <div className="errors">{formik.errors[name]}</div>}  
         </div>     
      );
-}
+};
  
 export default Input;
